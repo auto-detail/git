@@ -29,8 +29,8 @@ SELECT CONVERT(VARCHAR, asy.id) AS patient_id,
 				WHEN 2 THEN '二级护理'
 				WHEN 3 THEN '三级护理'
 				WHEN 8 THEN '特级护理'
-				WHEN 9 THEN '病重护理'
-				WHEN 10 THEN '病重护理'
+/*				WHEN 9 THEN '病重'
+				WHEN 10 THEN '口告病重'*/
 				ELSE CONVERT(VARCHAR, NULL) END AS nursing_class,
 	CASE WHEN LTRIM(RTRIM(asy.bq)) IN ('病危', '病重') THEN LTRIM(RTRIM(asy.bq))
 				WHEN asy.hljb = 9 THEN '病重'
