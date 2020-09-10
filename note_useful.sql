@@ -7,9 +7,9 @@ SELECT * FROM sys.configurations WHERE configuration_id = 1568
 
 /*内联表值函数，可替代视图*/
 ALTER FUNCTION f_inline_zybr(@brid int,@zyh varchar(8),@cyrq1 datetime,@cyrq2 datetime)
-RETURNS TABLE 
+RETURNS TABLE
 AS
-RETURN 
+RETURN
 (
 	SELECT id,zyh,xm,ryrq,cyrq,0 as bz
 	FROM asy
